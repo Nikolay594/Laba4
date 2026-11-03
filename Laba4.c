@@ -1,15 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int A, B;
     scanf("%d %d", &A, &B);
 
-    if ((A % 2 == 0 && B % 2 != 0) ||
-        (A % 2 != 0 && B % 2 == 0))
-        printf("YES");
-    else
-        printf("NO");
-
+    printf("%s", ((A % 2) != (B % 2)) ? "YES" : "NO");
     return 0;
 }
